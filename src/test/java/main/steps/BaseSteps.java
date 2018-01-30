@@ -1,5 +1,6 @@
 package main.steps;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.When;
 import main.Initializer;
 import org.openqa.selenium.WebDriver;
@@ -17,5 +18,8 @@ public class BaseSteps {
         driver.get(url);
     }
 
-
+    @After
+    public void close() {
+        driver.close();
+    }
 }
