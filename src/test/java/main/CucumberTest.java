@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(format = {"pretty", "html:target/cucumber"},
         features = {"src/test/resources/features/yandex.feature", "src/test/resources/features/alfa.feature"},
-        tags = "@3")
+        tags = "@1")
 public class CucumberTest {
 }
