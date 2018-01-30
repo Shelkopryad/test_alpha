@@ -20,39 +20,39 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 public class AlfaSteps {
 
-    private static WebDriver driver;
-
-    @Before
-    public static void loadDriver() {
-        if (driver == null) {
-            driver = Initializer.getDriver();
-        }
-    }
-
-    @Given("^user goes to page \"(.*?)\"$")
-    public void userGoesToPage(String url) {
-        driver.get(url);
-        driver.manage().window().maximize();
-
-    }
-
-    @When("^user click on link \"(.*?)\"$")
-    public void clickOn(String elementName) {
-        Wait<WebDriver> wait = new WebDriverWait(driver, 10).withMessage("Element was not found");
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[normalize-space(text())='" + elementName + "']"))));
-        WebElement link = driver.findElement(By.xpath("//a[normalize-space(text())='" + elementName + "']"));
-        link.click();
-    }
-
-    @When("search \"(.*?)\"")
-    public void search(String value) {
-        Wait<WebDriver> wait = new WebDriverWait(driver, 10).withMessage("Element was not found");
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@name='q']"))));
-        WebElement searchField = driver.findElement(By.xpath("//input[@name='q']"));
-        searchField.sendKeys(value);
-        WebElement submit = driver.findElement(By.xpath("//input[@name='btnK']"));
-        submit.click();
-    }
+//    private static WebDriver driver;
+//
+//    @Before
+//    public static void loadDriver() {
+//        if (driver == null) {
+//            driver = Initializer.getDriver();
+//        }
+//    }
+//
+//    @Given("^user goes to yandexMainPage \"(.*?)\"$")
+//    public void userGoesToPage(String url) {
+//        driver.get(url);
+//        driver.manage().window().maximize();
+//
+//    }
+//
+//    @When("^user click on link \"(.*?)\"$")
+//    public void clickOn(String elementName) {
+//        Wait<WebDriver> wait = new WebDriverWait(driver, 10).withMessage("Element was not found");
+//        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[normalize-space(text())='" + elementName + "']"))));
+//        WebElement link = driver.findElement(By.xpath("//a[normalize-space(text())='" + elementName + "']"));
+//        link.click();
+//    }
+//
+//    @When("search \"(.*?)\"")
+//    public void search(String value) {
+//        Wait<WebDriver> wait = new WebDriverWait(driver, 10).withMessage("Element was not found");
+//        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@name='q']"))));
+//        WebElement searchField = driver.findElement(By.xpath("//input[@name='q']"));
+//        searchField.sendKeys(value);
+//        WebElement submit = driver.findElement(By.xpath("//input[@name='btnK']"));
+//        submit.click();
+//    }
 
 //    @When("^set checkbox filter \"(.*?)\"$")
 //    public void setFilter(String filterName) {
@@ -113,13 +113,13 @@ public class AlfaSteps {
 
 
 
-    @After
-    public static void close() {
-        driver.close();
-    }
-
-    private void waitForPageIsLoad(Wait<WebDriver> wait) {
-        wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: block"));
-        wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: none"));
-    }
+//    @After
+//    public static void close() {
+//        driver.close();
+//    }
+//
+//    private void waitForPageIsLoad(Wait<WebDriver> wait) {
+//        wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: block"));
+//        wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: none"));
+//    }
 }
