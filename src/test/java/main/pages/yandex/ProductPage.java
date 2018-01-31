@@ -1,7 +1,7 @@
 package main.pages.yandex;
 
 import main.Constants;
-import main.Initializer;
+import main.core.Initializer;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,6 +25,6 @@ public class ProductPage extends HtmlElement {
     private WebElement title;
 
     public void checkProductTitle() {
-        Assert.assertEquals("Не соответствует название родукта", Initializer.getSTASH(Constants.PRODUCT_NAME), title.getText());
+        Assert.assertEquals("Не соответствует название родукта", Initializer.getStash(Constants.PRODUCT_NAME), title.getText());
     }
 }

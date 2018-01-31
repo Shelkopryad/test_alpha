@@ -1,7 +1,7 @@
 package main.steps.yandex;
 
 import cucumber.api.java.en.Then;
-import main.Initializer;
+import main.core.Initializer;
 import main.pages.yandex.ProductPage;
 import org.openqa.selenium.WebDriver;
 

@@ -8,20 +8,17 @@ import ru.yandex.qatools.htmlelements.element.*;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
 
-import javax.swing.text.html.HTML;
-import java.awt.*;
 import java.util.List;
 
 /**
  * Created by Shelk on 1/30/2018.
  */
+
 public class YandexMainPage extends HtmlElement {
 
     public YandexMainPage(WebDriver driver) {
         HtmlElementLoader.populatePageObject(this, driver);
     }
-
-    private Robot robot;
 
     @Name("Поисковая строка")
     @FindBy(xpath = "//input[@id='text']")
@@ -44,15 +41,5 @@ public class YandexMainPage extends HtmlElement {
         }
         Assert.fail("Не найдено ссылки \"" + linkName + "\"");
     }
-
-//    public void search(String request) {
-//        try {
-//            robot = new Robot();
-//        } catch (AWTException e) {
-//            e.printStackTrace();
-//        }
-//        search.sendKeys(request);
-//        robot.keyPress(KeyEvent.VK_ENTER);
-//    }
 
 }

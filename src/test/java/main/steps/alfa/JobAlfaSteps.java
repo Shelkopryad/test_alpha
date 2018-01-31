@@ -1,6 +1,6 @@
 package main.steps.alfa;
 
-import main.Initializer;
+import main.core.Initializer;
 import main.pages.alfa.JobAlfaPage;
 import org.openqa.selenium.WebDriver;
 

@@ -1,16 +1,11 @@
 package main.steps.yandex;
 
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import main.Constants;
-import main.Initializer;
+import main.core.Initializer;
 import main.pages.yandex.MarketMainPage;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -44,7 +39,7 @@ public class MarketSteps {
     }
 
     private void waitForPageIsLoad() {
-        Wait<WebDriver> wait = new WebDriverWait(driver, 10).withMessage("Element was not found");
+        WebDriverWait wait = (WebDriverWait) new WebDriverWait(driver, 10).withMessage("Element was not found");
         wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: block"));
         wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: none"));
     }

@@ -1,7 +1,7 @@
 package main.steps.google;
 
 import cucumber.api.java.en.When;
-import main.Initializer;
+import main.core.Initializer;
 import org.openqa.selenium.WebDriver;
 import main.pages.google.GoogleMainPage;
 

@@ -2,7 +2,8 @@ package main.steps;
 
 import cucumber.api.java.After;
 import cucumber.api.java.en.When;
-import main.Initializer;
+import io.qameta.allure.Description;
+import main.core.Initializer;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -12,6 +13,7 @@ public class BaseSteps {
 
     private WebDriver driver = Initializer.getDriver();
 
+    @Description("User on page")
     @When("^user goes to page \"(.*?)\"$")
     public void goToPage(String url) {
         driver.manage().window().maximize();

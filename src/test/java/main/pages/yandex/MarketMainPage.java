@@ -1,7 +1,7 @@
 package main.pages.yandex;
 
 import main.Constants;
-import main.Initializer;
+import main.core.Initializer;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -93,7 +93,7 @@ public class MarketMainPage extends HtmlElement {
     }
 
     public void chooseFirstProductAndSaveName() {
-        Initializer.setSTASH(Constants.PRODUCT_NAME, resultsProducts.get(0).getText());
+        Initializer.setStash(Constants.PRODUCT_NAME, resultsProducts.get(0).getText());
         resultsProducts.get(0).click();
     }
 

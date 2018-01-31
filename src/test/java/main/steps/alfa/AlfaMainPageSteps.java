@@ -1,7 +1,7 @@
 package main.steps.alfa;
 
 import cucumber.api.java.en.When;
-import main.Initializer;
+import main.core.Initializer;
 import main.pages.alfa.AlfaMainPage;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
