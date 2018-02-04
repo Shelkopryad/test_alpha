@@ -1,3 +1,8 @@
-./idea
-test_alfa2.iml
-./allure-results
+.idea/
+
+allure-results/
+
+src/test/resources/drivers/
+
+target/*
+test_alfa_2\.iml
