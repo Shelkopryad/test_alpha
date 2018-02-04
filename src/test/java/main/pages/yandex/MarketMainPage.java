@@ -5,6 +5,7 @@ import main.core.Initializer;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.allure.annotations.Step;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.element.Link;
@@ -46,6 +47,7 @@ public class MarketMainPage extends HtmlElement {
     @FindBy(xpath = "//div[@class='n-snippet-cell2__header']/div[@class='n-snippet-cell2__title']/a")
     private List<Link> resultsProducts;
 
+    @Step("Клик в блоке категорий \"{0}\" по ссылке \"{1}\"")
     public void clickOn(String where, String linkName) {
         List<Link> list = null;
         switch (where) {

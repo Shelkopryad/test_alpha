@@ -3,6 +3,7 @@ package main.pages.yandex;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.allure.annotations.Step;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.*;
 import ru.yandex.qatools.htmlelements.element.Button;
@@ -32,6 +33,7 @@ public class YandexMainPage extends HtmlElement {
     @FindBy(xpath = "//div[@class='home-tabs stream-control i-bem dropdown-menu home-tabs_js_inited']/a")
     private List<Link> links;
 
+    @Step("Клик по ссылке \"{0}\"")
     public void clickOnLink(String linkName) {
         for (Link link : links) {
             if (linkName.equals(link.getText())) {

@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.allure.annotations.Step;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.loader.HtmlElementLoader;
@@ -24,6 +25,7 @@ public class ProductPage extends HtmlElement {
     @FindBy(xpath = "//h1[@class='title title_size_28 title_bold_yes']")
     private WebElement title;
 
+    @Step("Проверка соответствия названия продукта")
     public void checkProductTitle() {
         Assert.assertEquals("Не соответствует название родукта", Initializer.getStash(Constants.PRODUCT_NAME), title.getText());
     }
