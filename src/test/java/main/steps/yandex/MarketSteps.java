@@ -39,7 +39,7 @@ public class MarketSteps {
     }
 
     private void waitForPageIsLoad() {
-        WebDriverWait wait = (WebDriverWait) new WebDriverWait(driver, 10).withMessage("Element was not found");
+        WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: block"));
         wait.until(ExpectedConditions.attributeContains(By.xpath("//div[contains(@class,'n-filter-panel-counter_hidden_')]"), "style", "display: none"));
     }
